@@ -13,7 +13,7 @@ BinaryTree.prototype = {
     },
 
     add: function(value){
-
+        // Add new node to BinaryTree
         var node = new Node(value);
         var current;
 
@@ -45,6 +45,7 @@ BinaryTree.prototype = {
     },
 
     getLCA: function (root, n1,n2) {
+        // Get Least Common Ancestor, recursion, maximum call stack exceeded for many iterations.
         if(root != null){
             if(root.value == n1 || root.value == n2){
                 return this.root;
@@ -68,6 +69,7 @@ BinaryTree.prototype = {
     },
 
     getDistance: function(value){
+        // Distance from root to the node whose value is the one given
         var node = new Node(value);
         var current;
         if(this.root === null){
