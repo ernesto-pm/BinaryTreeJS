@@ -48,7 +48,7 @@ describe('Array', function(){
             miArbol.add(8);
             expect(miArbol.root.left.left).to.not.equal(null);
         })
-    })
+    });
 
     describe('insertarNodoMenorAnidado', function () {
         it('Debe insertar un nodo con valor mayor al hijo derecho de la raiz', function () {
@@ -58,7 +58,26 @@ describe('Array', function(){
             miArbol.add(12);
             expect(miArbol.root.right.right).to.not.equal(null);
         })
-    })
+    });
+
+    describe('verificarDistancia', function(){
+       it('Debe dar un resultado correcto al verificar la distancia entre dos nodos', function () {
+           var myTree = new BinaryTree();
+
+           myTree.add(5);
+           myTree.add(3);
+           myTree.add(6);
+           myTree.add(7);
+           myTree.add(1);
+           myTree.add(2);
+           myTree.add(4);
+           myTree.add(12);
+           myTree.add(8);
+           myTree.add(15);
+
+           expect(myTree.distanceB2Nodes(3,7)).to.equal(3);
+       })
+    });
 
 
 });
